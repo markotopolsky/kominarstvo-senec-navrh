@@ -1,5 +1,5 @@
 import Image from "next/image";
-import heroImage from "@/public/images/hero-kominar.jpg";
+import heroImage from "@/public/images/hero-kominar-pri-praci.jpg";
 import { mainPhone, people, telHref } from "../lib/site";
 import { ButtonLink } from "./ButtonLink";
 import { BadgeIcon, CameraIcon, DocumentIcon } from "./icons";

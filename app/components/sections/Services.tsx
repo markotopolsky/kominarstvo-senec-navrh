@@ -1,4 +1,9 @@
+import Image, { type StaticImageData } from "next/image";
 import { Fragment, type ComponentType, type SVGProps } from "react";
+import analyzerPhoto from "@/public/images/sluzba-analyzator.jpg";
+import cameraPhoto from "@/public/images/sluzba-kamera.jpg";
+import cleaningPhoto from "@/public/images/sluzba-cistenie.jpg";
+import testingPhoto from "@/public/images/sluzba-preskusanie.jpg";
 import {
   CameraIcon,
   CheckCircleIcon,
@@ -6,7 +11,6 @@ import {
   DocumentIcon,
   GaugeIcon,
 } from "../icons";
-import { PhotoPlaceholder } from "../PhotoPlaceholder";
 import { SectionHeading } from "../SectionHeading";
 
 type Service = {
@@ -14,7 +18,7 @@ type Service = {
   title: string;
   description: string;
   points: string[];
-  photo: string;
+  photo: { src: StaticImageData; alt: string };
 };
 
 const services: Service[] = [
@@ -24,7 +28,7 @@ const services: Service[] = [
     description:
       "Vykonávame ročné kontroly a čistenia komínov a dymovodov na tuhé a plynné palivo podľa vyhlášky č. 401/2007.",
     points: ["Komíny a dymovody", "Tuhé aj plynné palivo", "Lehoty podľa vyhlášky č. 401/2007"],
-    photo: "čistenie komína",
+    photo: { src: cleaningPhoto, alt: "Tehlový komín na streche z pálenej krytiny" },
   },
   {
     icon: CameraIcon,
@@ -32,14 +36,14 @@ const services: Service[] = [
     description:
       "Vykonávame odborné prehliadky 20 metrovou komínovou kamerou.",
     points: ["Komínová kamera 20 m", "Odborná prehliadka komína"],
-    photo: "komínová kamera",
+    photo: { src: cameraPhoto, alt: "Rebrík opretý o strechu vedie ku komínu" },
   },
   {
     icon: GaugeIcon,
     title: "Kontrola únikov spalín",
     description: "Úniky spalín kontrolujeme analyzátorom spalín.",
     points: ["Analyzátor spalín", "Kontrola únikov"],
-    photo: "analyzátor spalín",
+    photo: { src: analyzerPhoto, alt: "Kotolňa s potrubím, ventilmi a manometrami" },
   },
   {
     icon: DocumentIcon,
@@ -47,7 +51,7 @@ const services: Service[] = [
     description:
       "Preskúšanie komínov a dymovodov – doklady potrebné ku kolaudácii.",
     points: ["Komíny a dymovody", "Doklady ku kolaudácii"],
-    photo: "preskúšanie komína",
+    photo: { src: testingPhoto, alt: "Pokrývači kladú strešnú krytinu na novostavbe" },
   },
 ];
 
@@ -99,7 +103,16 @@ function ServiceRow({ service, reversed }: { service: Service; reversed: boolean
         </ul>
       </div>
 
-      <PhotoPlaceholder label={service.photo} className="h-[350px] w-full" />
+      <div className="relative h-[350px] w-full overflow-hidden rounded-button">
+        <Image
+          src={service.photo.src}
+          alt={service.photo.alt}
+          fill
+          placeholder="blur"
+          sizes="(min-width: 1280px) 580px, 50vw"
+          className="object-cover"
+        />
+      </div>
     </article>
   );
 }

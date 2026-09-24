@@ -1,5 +1,5 @@
 import Image from "next/image";
-import ctaImage from "@/public/images/hero-kominar.jpg";
+import ctaImage from "@/public/images/cta-ohen-v-kachliach.jpg";
 import { mainPhone, telHref } from "../../lib/site";
 import { ButtonLink } from "../ButtonLink";
 

@@ -1,5 +1,5 @@
 import Image from "next/image";
-import statsImage from "@/public/images/kominar-maly.jpg";
+import statsImage from "@/public/images/strechy-s-kominmi.jpg";
 
 const stats = [
   { value: "3", label: "kominári v tíme" },
@@ -15,7 +15,7 @@ export function Stats() {
         <div className="relative h-[180px] flex-1 overflow-hidden rounded-button">
           <Image
             src={statsImage}
-            alt="Malý kominár s rebríkom a kefou"
+            alt="Tehlové domy s komínmi"
             fill
             placeholder="blur"
             sizes="400px"

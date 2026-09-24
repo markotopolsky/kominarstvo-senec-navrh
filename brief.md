@@ -190,6 +190,28 @@ Všetko pod `https://kominarstvosenec.sk/wp-content/uploads/`:
 
 Poznámka: fotky vyzerajú ako stock (Masterfile, Pixabay). Overiť licencie alebo nahradiť vlastnými.
 
+Na novej stránke sa pôvodné fotky už nepoužívajú, nahradili ich fotky z Unsplash (pozri nižšie).
+
+### Fotky na novej stránke (Unsplash, 2026-09-24)
+
+Všetky sú pod Unsplash License (bezplatné komerčné použitie, uvedenie autora nie je povinné). Súbory sú v `public/images/`, zmenšené a skomprimované.
+
+| Súbor | Sekcia | Unsplash ID | Autor |
+|---|---|---|---|
+| `hero-kominar-pri-praci.jpg` | Hero | `06M6JYNyi30` | Waldemar Brandt |
+| `cta-ohen-v-kachliach.jpg` | CTA pás | `hwMmAIMOzxU` | Jen Dries |
+| `strechy-s-kominmi.jpg` | Čísla | `W9_OfuYmF4E` | Annie Spratt |
+| `obyvacka-s-kachlami.jpg` | Prečo my | `f_6yPIgDxxs` | Clay Banks |
+| `sluzba-cistenie.jpg` | Služby: kontroly a čistenie | `oUmZaw6JG2E` | Michal Vrba |
+| `sluzba-kamera.jpg` | Služby: komínová kamera | `6uNBAv7_7Qc` | Martin Martz |
+| `sluzba-analyzator.jpg` | Služby: analyzátor spalín | `U0jpGKtMtWE` | Immo Wegmann |
+| `sluzba-preskusanie.jpg` | Služby: preskúšanie komínov | `OnwxQNEbPco` | Sergej (priezvisko skryté) |
+| `lehota-tuhe-palivo.jpg` | Lehoty 01 | `YOdU8nmUAB4` | SeongUk Kim |
+| `lehota-bez-vlozky.jpg` | Lehoty 02 | `wpU5hr8p8FY` | Xin |
+| `lehota-s-vlozkou.jpg` | Lehoty 03 | `5JrUYMWGp7A` | Ricardo Gomez Angel |
+
+Odkaz na fotku: `https://unsplash.com/photos/<ID>`. Hero fotka je zrkadlovo otočená, aby tvár kominára nebola pod textom.
+
 ### Nové logo
 
 Zdroj: `public/logo-all/kominarstvosenec-nove-logo.svg` (biele logo na čiernom pozadí).
@@ -222,7 +244,7 @@ Zdroj: `public/logo-all/favicon_io/` (kominár na komíne, čierna na bielom). N
 - [ ] Vyhláška č. 401/2007: overiť aktuálnosť znenia (uvedený len § 20)
 - [ ] Nové URL (použité v menu novej stránky): `/vyhlaska-c-401-2007`, `/kontakt`, `/gdpr`. Potvrdiť a nastaviť 301 presmerovania zo starých `/index.php/...` URL
 - [ ] Úvodná stránka (2026-09-24): layout podľa Framer šablóny ReoRoof, texty z tohto briefu. Sekcie: Hero, pás výhod, Služby, Prečo my, Lehoty (§ 20), Čísla, Tím, Časté otázky (§ 20), CTA, footer. Recenzie zo šablóny nepoužité (nemáme žiadne)
-- [ ] Chýbajúce fotky (zatiaľ sivé zástupné bloky „Foto: …"): 4× služby (čistenie komína, komínová kamera, analyzátor spalín, preskúšanie), 1× tím (na výšku, 480×560), 3× lehoty (kotol na tuhé palivo, komín bez vložky, komínová vložka). CTA pás zatiaľ opakuje hero fotku
+- [ ] Fotky z Unsplash sú dočasné. Na Unsplash nie sú zábery komínovej kamery ani analyzátora spalín, preto sú v týchto službách len ilustračné fotky (rebrík ku komínu, kotolňa). V sekcii Prečo my bola pôvodne plánovaná fotka tímu (na výšku, 480×560), zatiaľ je tam obývačka s kachľami. Ideálne nahradiť vlastnými fotkami tímu a techniky
 - [ ] Fotka `chimney-sweeper-2792895_192077.jpg` má v sebe vpálený text (názov firmy, adresa), preto sa na webe nepoužíva
 - [ ] Text výstrahy v CTA je jazykovo upravený (čiarka, bodka), posledná veta „Sadze by mohli spôsobiť požiar." je presunutá do nadpisu
 - [ ] Hero: CTA texty („Objednať kontrolu komína", „Kontaktujte nás") a telefón v hero (Ladislav Kálmán) potvrdiť s klientom

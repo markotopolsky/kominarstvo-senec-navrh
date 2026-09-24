@@ -1,6 +1,7 @@
+import Image from "next/image";
+import benefitsPhoto from "@/public/images/obyvacka-s-kachlami.jpg";
 import { ButtonLink } from "../ButtonLink";
 import { CheckCircleIcon } from "../icons";
-import { PhotoPlaceholder } from "../PhotoPlaceholder";
 import { SectionHeading } from "../SectionHeading";
 
 const benefits = [
@@ -46,9 +47,13 @@ export function Benefits() {
 
         <div className="relative w-[480px]">
           <div className="relative h-[560px] overflow-hidden rounded-button">
-            <PhotoPlaceholder
-              label="tím Kominárstva Senec"
-              className="h-full w-full bg-ink-soft text-steel"
+            <Image
+              src={benefitsPhoto}
+              alt="Útulná obývačka s rozkúrenými kachľami"
+              fill
+              placeholder="blur"
+              sizes="480px"
+              className="object-cover"
             />
             <div className="pointer-events-none absolute inset-0 rounded-button shadow-[inset_0_0_0_1px_var(--color-line-light)]" />
           </div>
