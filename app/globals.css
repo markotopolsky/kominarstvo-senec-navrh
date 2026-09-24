@@ -1,0 +1,117 @@
+@import "tailwindcss";
+
+/*
+ * Design tokens. Values follow the ReoRoof Framer reference (desktop).
+ * Every token here becomes a CSS variable on :root and a Tailwind utility
+ * (e.g. --color-ink -> bg-ink, text-ink).
+ */
+@theme {
+  /* Colors */
+  --color-ink: #12151c; /* hero / dark sections */
+  --color-ink-soft: #1b1f28;
+  --color-accent: #c45c33; /* primary buttons */
+  --color-accent-strong: #ad512d; /* primary hover */
+  --color-accent-soft: #d67047; /* icons on dark */
+  --color-page: #faf7f1; /* page background */
+  --color-cream: #f8f6f2; /* light text on dark */
+  --color-sand: #f2ece3; /* secondary text on dark, light sections */
+  --color-text: #181715; /* body text on light */
+  --color-muted: #6c6861;
+  --color-mist: #c7c8ce; /* trust row text */
+  --color-steel: #a3a5ac;
+  --color-line-dark: #14120f1f;
+  --color-line-light: #ffffff1f;
+  --color-outline-on-dark: #ffffff52;
+  --color-outline-on-light: #14120f52;
+
+  /* Fonts */
+  --font-sans: var(--font-archivo), "Archivo", ui-sans-serif, system-ui, sans-serif;
+
+  /* Type scale: size / line-height / letter-spacing / weight */
+  --text-display: 68px;
+  --text-display--line-height: 1.04;
+  --text-display--letter-spacing: -0.01em;
+  --text-display--font-weight: 500;
+
+  --text-h2: 42px;
+  --text-h2--line-height: 1.08;
+  --text-h2--letter-spacing: -0.01em;
+  --text-h2--font-weight: 500;
+
+  --text-h3: 20px;
+  --text-h3--line-height: 1.25;
+  --text-h3--font-weight: 500;
+
+  --text-stat: 42px;
+  --text-stat--line-height: 1;
+  --text-stat--letter-spacing: -0.03em;
+  --text-stat--font-weight: 500;
+
+  --text-body: 16px;
+  --text-body--line-height: 1.6;
+
+  --text-eyebrow: 13px;
+  --text-eyebrow--line-height: 1.2;
+  --text-eyebrow--letter-spacing: 0.08em;
+  --text-eyebrow--font-weight: 600;
+
+  --text-lead: 18px;
+  --text-lead--line-height: 1.55;
+
+  --text-button: 16px;
+  --text-button--line-height: 1.6;
+
+  --text-small: 14px;
+  --text-small--line-height: 1.5;
+  --text-small--font-weight: 500;
+
+  --text-logo: 22px;
+  --text-logo--line-height: 1.2;
+  --text-logo--letter-spacing: -0.01em;
+  --text-logo--font-weight: 600;
+
+  /* Layout */
+  --spacing-gutter: 40px;
+  --spacing-section: 120px;
+  --container-hero: 800px;
+  --container-content: 1200px;
+  --container-heading: 640px;
+  --radius-button: 8px;
+
+  /* Motion */
+  --animate-appear: appear 0.8s cubic-bezier(0.22, 1, 0.36, 1) both;
+
+  @keyframes appear {
+    from {
+      opacity: 0.001;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: none;
+    }
+  }
+}
+
+@layer base {
+  html {
+    background: var(--color-page);
+    scroll-behavior: smooth;
+  }
+
+  body {
+    background: var(--color-page);
+    color: var(--color-text);
+    font-family: var(--font-sans);
+    font-feature-settings: "blwf" on, "cv03" on, "cv04" on, "cv09" on, "cv11" on;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      transition-duration: 0.01ms !important;
+    }
+  }
+}
